@@ -4,7 +4,7 @@
     <h3>Iteration 2.1: <span>{{2+2}}</span></h3>
     <h3>Iteration 2.2: <span>{{getString()}}</span></h3>
 <hr/>
-<div class="it3-container">
+<div class="it-container">
     <button @click="toggleVisibility"><h3>Iteration 3: Button</h3></button>
     <div v-show="visible" class="iteration3">
       <h3>Iteration 3: Cool element</h3>
@@ -12,6 +12,15 @@
   </div>
   <hr/>
   <List />
+  <hr>
+  <div class="it-container">
+    <button @click="changeBackground"><h3>Iteration 5: Button</h3></button>
+    <div class="iteration3" :style="(bgColor)">
+      <h3>Iteration 5: Cool element</h3>
+    </div>
+  </div>
+
+
   </section>
 
   <Footer />
@@ -34,6 +43,12 @@ function toggleVisibility() {
   visible.value = !visible.value
 }
 
+const bgColor = ref("background-color: blue");
+
+function changeBackground() {
+  bgColor.value === "background-color: blue" ? bgColor.value = "background-color: green" : bgColor.value = "background-color: blue" ;
+}
+
 </script>
 
 <style>
@@ -47,7 +62,7 @@ h3 span {
   color: grey
 }
 
-.it3-container {
+.it-container {
   display: flex;
   gap: 10px;
   height:  70px;

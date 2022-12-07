@@ -10,6 +10,7 @@ export default {};
   
   <style>
 footer {
+  margin-top: 20px;
   height: 100px;
   width: 100%;
   background-color: rgb(232, 83, 70);

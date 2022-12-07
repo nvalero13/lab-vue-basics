@@ -1,6 +1,6 @@
 <template>
   <h3>Iteration 4: List Rendering</h3>
-  <div v-for="post in data">
+  <div v-for="post in data" :key="post.title">
     <article>
       <h2>{{ post.title }}</h2>
       <h4>{{ post.description }}</h4>
