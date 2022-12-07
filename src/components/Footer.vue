@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <h1>Footer</h1>
+    <h2>Iteration 1: Footer</h2>
   </footer>
 </template>
   
@@ -12,11 +12,13 @@ export default {};
 footer {
   height: 100px;
   width: 100%;
-  background-color: grey;
-  position: absolute;
-  bottom: 0;
+  background-color: rgb(232, 83, 70);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+h2 {
+  color: white;
 }
 </style>
